@@ -1,6 +1,6 @@
 let c = "red";
 function setup() {
-  createCanvas(700, 700);
+  createCanvas(1000, 1000);
 }
 
 function draw() {
@@ -70,7 +70,7 @@ function mouseLocationCheck() {
     c = color(0, 255, 255);
   }
   else if(mouseX > 0 && mouseX < 30 && mouseY > 150 && mouseY < 180){
-    c = color(0, 255, 255);
+    c = color(0, 0, 255);
   }
   else if(mouseX > 0 && mouseX < 30 && mouseY > 180 && mouseY < 210){
     c = color(255, 51, 255);
