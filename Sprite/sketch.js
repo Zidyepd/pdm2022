@@ -8,7 +8,7 @@ let character3;
 function preload(){
   spriteSheet1 = loadImage("SpelunkyGuy.png");
   spriteSheet2 = loadImage("Green.png");
-  spriteSheet3 = loadImage("Blue.png");
+  spriteSheet3 = loadImage("character3.png");
 }
 
 function setup() {
@@ -17,7 +17,7 @@ function setup() {
 
   character = new Character(spriteSheet1, 80, 200);
   character2 = new Character(spriteSheet2, 300, 300);
-  character3 = new Character(spriteSheet3, 500, 100);
+  character3 = new Character(spriteSheet3, 500, 200);
 }
 
 function keyPressed(){
