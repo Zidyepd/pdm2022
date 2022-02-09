@@ -15,9 +15,9 @@ function setup() {
   createCanvas(700, 700);
   imageMode(CENTER);
 
-  character = new Character(spriteSheet1, 80, 200);
-  character2 = new Character(spriteSheet2, 300, 300);
-  character3 = new Character(spriteSheet3, 500, 200);
+  character = new Character(spriteSheet1, random(100, 150), random(100, 300));
+  character2 = new Character(spriteSheet2, random(200, 350), random(100, 500));
+  character3 = new Character(spriteSheet3, random(350, 500), random(100, 500));
 }
 
 function keyPressed(){
