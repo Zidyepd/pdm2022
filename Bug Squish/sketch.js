@@ -208,7 +208,7 @@ class Character{
         this.stop();
         this.squished = true;
         score+=1;
-        speed += 0.3;     
+        speed += 0.5;     
       }
     }
 }
