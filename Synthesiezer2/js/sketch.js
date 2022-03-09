@@ -1,14 +1,8 @@
 let pitch = 800;
 let img;
 
-// Set up Tone
 
 let gain = new Tone.Gain().toDestination();
-
-
- 
-
-
 
 let noise = new Tone.Noise('brown');
 let noiseEnv = new Tone.AmplitudeEnvelope({
