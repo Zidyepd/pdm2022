@@ -34,7 +34,7 @@ function timer(){
 function mousePressed(){
   //if (gameState == "end" || gameState == "wait"){
     //playSound();
-  //}
+ // }
   
   let dmin = -1;
   let character_id = -1;
@@ -226,4 +226,61 @@ class Character{
       }
     }
 }
+
+let synth = new Tone.PolySynth().toDestination();
+
+let melody = new Tone.Sequence((time, note)=>{
+  if (note!=null){
+    synth.triggerAttackRelease(note, '8n', time);
+  }
+
+}, ["G4",  "A4", "A4","C5", "G5", null,"G5"]);
+
+let chords = [
+  {"time": "1", "note":["G5", "E3", "C4", "F4"]},
+  {"time": "2", "note":["C3", "G4", "F4", "A4"]},
+  {"time": "3", "note":["A5", "A3", "G4", "A4"]},
+  {"time": "4", "note":["C4", "C2", "G2", "C4"]}
+]
+
+let chord = new Tone.Part((time,notes)=>{
+  synth.triggerAttackRelease(notes.note, '2n', time,);  
+}, chords);
+
+const synthA = new Tone.FMSynth().toDestination();
+const synthB = new Tone.AMSynth().toDestination();
+
+
+const loopA = new Tone.Loop(time=>{
+  synthA.triggerAttackRelease("B3", "8n", time); 
+}, "4n");
+
+const loopB = new Tone.Loop(time=>{
+  synthA.triggerAttackRelease("C4", "8n", time); 
+}, "4n");
+
+
+Tone.Transport.bpm.value=90;
+function playSound(){
+  Tone.start();
+  loopA.stop('+0');
+  loopB.stop('+0');
+  chord.loop = true;
+  chord.loopEnd = '2m';
+  chord.start('+0');
+  chord.stop('+30');
+  melody.start("+0");
+  melody.stop('+30');
+  loopA.start('+30');
+  loopB.start('+30');  
+  Tone.Transport.start();
+}
+
+
+
+function Sound(sound) {
+  sounds.player(sound).start();
+}
+
+
 
