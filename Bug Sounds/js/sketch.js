@@ -32,9 +32,9 @@ function timer(){
 }
 
 function mousePressed(){
-  //if (gameState == "end" || gameState == "wait"){
-    //playSound();
- // }
+  if (gameState == "end" || gameState == "wait"){
+    playSound();
+  }
   
   let dmin = -1;
   let character_id = -1;
@@ -50,7 +50,7 @@ function mousePressed(){
 
   if (character_id != -1){
     character[character_id].squish();
-    Sound("squishSound");
+    //Sound("squishSound");
   //else{
    // Sound("buzzer");
   }
