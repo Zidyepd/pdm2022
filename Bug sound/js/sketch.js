@@ -50,11 +50,11 @@ function mousePressed(){
 
   if (character_id != -1){
     character[character_id].squish();
-    sounds.player('squishSound').start();
+   // sounds.player('squishSound').start();
   }
-  else{
-    Sound("buzzer");
-  }
+  //else{
+   // Sound("buzzer");
+ // }
 }
 
 
