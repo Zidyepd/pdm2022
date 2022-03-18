@@ -53,8 +53,8 @@ function mousePressed(){
     Sound("squishSound");
   //else{
    // Sound("buzzer");
- // }
-}}
+  }
+}
 
 
 function draw() {
