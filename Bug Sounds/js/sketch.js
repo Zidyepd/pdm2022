@@ -50,10 +50,12 @@ function mousePressed(){
 
   if (character_id != -1){
     character[character_id].squish();
-    //Sound("squishSound");
-  //else{
-   // Sound("buzzer");
+    Sound("squishSound");
   }
+  else{
+   Sound("buzzer");
+  }
+
 }
 
 
